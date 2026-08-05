@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Sweet Adeline | Toko Kue Modern Mewah</title>
+    <link rel="icon" href="img/logo/LOGO.png" type="image/png">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Great+Vibes&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#e2e2e2",
+                        "surface-dim": "#dadada",
+                        "primary-fixed": "#ffd9e3",
+                        "on-secondary-fixed": "#241a00",
+                        "on-primary-container": "#704654",
+                        "surface-bright": "#f9f9f9",
+                        "tertiary-fixed-dim": "#e5bfa5",
+                        "surface-container-low": "#f3f3f3",
+                        "tertiary-container": "#e5bfa4",
+                        "secondary-fixed-dim": "#ecc246",
+                        "inverse-surface": "#2f3131",
+                        "error-container": "#ffdad6",
+                        "tertiary": "#755843",
+                        "on-secondary-fixed-variant": "#584400",
+                        "on-surface-variant": "#504447",
+                        "outline-variant": "#d4c2c6",
+                        "background": "#f9f9f9",
+                        "surface-variant": "#e2e2e2",
+                        "secondary-fixed": "#ffe08e",
+                        "tertiary-fixed": "#ffdcc4",
+                        "surface-container": "#eeeeee",
+                        "on-tertiary-container": "#684d38",
+                        "on-tertiary-fixed": "#2b1706",
+                        "on-surface": "#1a1c1c",
+                        "on-secondary-container": "#735a00",
+                        "surface": "#f9f9f9",
+                        "on-tertiary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "secondary": "#755b00",
+                        "on-error-container": "#93000a",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "secondary-container": "#fed255",
+                        "inverse-on-surface": "#f1f1f1",
+                        "error": "#ba1a1a",
+                        "outline": "#827377",
+                        "inverse-primary": "#efb8c8",
+                        "primary": "#7d5260",
+                        "surface-tint": "#7d5260",
+                        "on-tertiary-fixed-variant": "#5c412d",
+                        "surface-container-high": "#e8e8e8",
+                        "on-primary-fixed": "#31111d",
+                        "primary-container": "#efb8c8",
+                        "on-background": "#1a1c1c",
+                        "on-primary-fixed-variant": "#633b48",
+                        "on-primary": "#ffffff",
+                        "primary-fixed-dim": "#efb8c8"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "16px",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-padding-mobile": "24px",
+                        "sm": "8px",
+                        "gutter": "24px",
+                        "xs": "4px",
+                        "base": "8px",
+                        "xl": "32px",
+                        "container-padding-desktop": "80px",
+                        "lg": "24px",
+                        "md": "16px",
+                        "xxl": "80px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Playfair Display"],
+                        "label-md": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "display-lg": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "brand": ["'Great Vibes'", "cursive"]
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="font-body-md text-body-md antialiased overflow-x-hidden">
+    <!-- Top Navigation Bar (Floating Glassmorphism) -->
+    <nav id="mainNav"
+        class="fixed top-4 left-1/2 -translate-x-1/2 w-[92%] md:w-[85%] max-w-6xl z-50 bg-white/85 backdrop-blur-xl rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-white/60 transition-all duration-500 hover:shadow-[0_8px_30px_rgb(0,0,0,0.1)] overflow-hidden">
+        <div class="flex justify-between items-center px-lg py-sm md:py-xs h-[72px]">
+
+            <!-- Brand -->
+            <div class="flex-shrink-0 pl-2">
+                <a class="font-brand text-[26px] sm:text-[32px] md:text-[38px] text-primary tracking-wide leading-none drop-shadow-sm pt-1"
+                    href="#">Sweet Adeline</a>
+            </div>
+
+            <!-- Center Nav Links -->
+            <div class="hidden lg:flex items-center justify-center gap-xs nav-links flex-1 ml-xl">
+                <a class="nav-item px-md py-sm rounded-full bg-primary/10 text-primary font-bold font-label-md text-[14px] transition-all duration-300"
+                    href="#home">Beranda</a>
+
+                <a class="nav-item px-md py-sm rounded-full text-on-surface-variant hover:bg-primary/5 hover:text-primary font-label-md text-[14px] transition-all duration-300"
+                    href="#products">Produk</a>
+                <a class="nav-item px-md py-sm rounded-full text-on-surface-variant hover:bg-primary/5 hover:text-primary font-label-md text-[14px] transition-all duration-300"
+                    href="#gallery">Galeri</a>
+                <a class="nav-item px-md py-sm rounded-full text-on-surface-variant hover:bg-primary/5 hover:text-primary font-label-md text-[14px] transition-all duration-300"
+                    href="#faq">FAQ</a>
+                <a class="nav-item px-md py-sm rounded-full text-on-surface-variant hover:bg-primary/5 hover:text-primary font-label-md text-[14px] transition-all duration-300"
+                    href="#contact">Kontak</a>
+            </div>
+
+            <!-- Right Section: CTA & Hamburger -->
+            <div class="flex-1 flex justify-end items-center gap-2 pr-1">
+                <a href="https://wa.me/6282211284894?text=Halo%20Mbak%20Adelia%20Wandiri,%20saya%20ingin%20memesan%20kue"
+                    target="_blank"
+                    class="bg-primary text-white px-md md:px-xl py-sm md:py-md rounded-full font-bold text-[14px] hover:bg-secondary-container hover:text-on-secondary-container transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5 whitespace-nowrap text-center flex items-center gap-xs group">
+                    <span
+                        class="material-symbols-outlined text-[18px] group-hover:rotate-12 transition-transform">shopping_bag</span>
+                    <span class="hidden sm:inline">Pesan</span>
+                </a>
+
+                <!-- Hamburger Button (Mobile Only) -->
+                <button id="mobileMenuBtn"
+                    class="lg:hidden text-primary p-2 hover:bg-primary/10 rounded-full transition-colors flex items-center justify-center">
+                    <span class="material-symbols-outlined text-[24px]">menu</span>
+                </button>
+            </div>
+
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobileMenu"
+            class="lg:hidden flex flex-col items-stretch px-lg gap-1 max-h-0 opacity-0 overflow-hidden transition-all duration-500 ease-in-out">
+            <a class="mobile-nav-item block px-md py-sm rounded-xl text-center text-on-surface-variant hover:bg-primary/10 hover:text-primary font-bold font-label-md text-[15px] transition-all"
+                href="#home">Beranda</a>
+
+            <a class="mobile-nav-item block px-md py-sm rounded-xl text-center text-on-surface-variant hover:bg-primary/10 hover:text-primary font-bold font-label-md text-[15px] transition-all"
+                href="#products">Produk</a>
+            <a class="mobile-nav-item block px-md py-sm rounded-xl text-center text-on-surface-variant hover:bg-primary/10 hover:text-primary font-bold font-label-md text-[15px] transition-all"
+                href="#gallery">Galeri</a>
+            <a class="mobile-nav-item block px-md py-sm rounded-xl text-center text-on-surface-variant hover:bg-primary/10 hover:text-primary font-bold font-label-md text-[15px] transition-all"
+                href="#faq">FAQ</a>
+            <a class="mobile-nav-item block px-md py-sm rounded-xl text-center text-on-surface-variant hover:bg-primary/10 hover:text-primary font-bold font-label-md text-[15px] transition-all"
+                href="#contact">Kontak</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center overflow-hidden cream-gradient pt-[100px] lg:pt-xxl"
+        id="home">
+        <div
+            class="px-container-padding-mobile md:px-container-padding-desktop w-full grid grid-cols-1 lg:grid-cols-2 gap-lg md:gap-xl items-center relative z-10 py-xl lg:py-xxl">
+            <div class="fade-up">
+                <span class="text-primary font-label-md text-label-md uppercase tracking-widest mb-md block">Toko Kue
+                    SweetAdeline</span>
+                <h1
+                    class="font-display-lg text-[28px] sm:text-[36px] lg:text-display-lg text-on-surface mb-md lg:mb-lg leading-[1.1]">
+                    Maniskan Setiap Momen Bersama Kami</h1>
+                <p class="text-on-surface-variant text-[14px] sm:text-body-lg font-body-lg mb-xl md:mb-xxl max-w-lg">Apa
+                    pun momen spesialnya,
+                    kami siap menghadirkan kue yang dibuat dengan sepenuh hati. setiap kreasi kue dibuat untuk
+                    melengkapi momen spesial
+                    Anda.</p>
+                <div class="flex flex-wrap items-center gap-sm md:gap-md">
+                    <a href="#products"
+                        class="bg-primary text-on-primary px-lg md:px-xl py-sm md:py-md rounded-xl font-label-md text-[13px] md:text-label-md shadow-lg hover:translate-y-[-2px] transition-all">Jelajahi
+                        Menu</a>
+                    <a href="https://wa.me/6282211284894?text=Halo%20Mbak%20Adelia%20Wandiri,%20saya%20ingin%20memesan%20kue"
+                        target="_blank"
+                        class="border-[1.5px] border-primary text-primary px-lg md:px-xl py-sm md:py-md rounded-xl font-label-md text-[13px] md:text-label-md hover:bg-primary-container transition-all flex items-center gap-sm">
+                        <span class="material-symbols-outlined text-[18px] md:text-[20px]">chat</span> Pesan via
+                        WhatsApp
+                    </a>
+                </div>
+            </div>
+            <div class="relative fade-up delay-200 mt-lg md:mt-0 flex flex-col items-center lg:items-end">
+                <div class="rounded-xl overflow-hidden aspect-[4/3] w-full max-w-lg shadow-xl relative">
+                    <!-- Slides Container -->
+                    <div id="heroSlideshow" class="flex w-full h-full transition-transform duration-700 ease-in-out">
+                        <img class="min-w-full h-full object-cover shrink-0" src="img/thubnail/1 (2).jpeg"
+                            alt="Kue Andalan Kami 1" />
+                        <img class="min-w-full h-full object-cover shrink-0" src="img/thubnail/2.jpeg"
+                            alt="Kue Andalan Kami 2" />
+                        <img class="min-w-full h-full object-cover shrink-0" src="img/thubnail/3.jpeg"
+                            alt="Kue Andalan Kami 3" />
+                    </div>
+                </div>
+                <!-- Indicators -->
+                <div class="flex justify-center gap-2 mt-md z-10 w-full max-w-lg" id="heroIndicators">
+                    <button class="h-2.5 rounded-full bg-primary transition-all w-8"></button>
+                    <button class="w-2.5 h-2.5 rounded-full bg-primary/30 hover:bg-primary/60 transition-all"></button>
+                    <button class="w-2.5 h-2.5 rounded-full bg-primary/30 hover:bg-primary/60 transition-all"></button>
+                </div>
+            </div>
+        </div>
+        <!-- Abstract shape decoration -->
+        <div
+            class="absolute top-0 right-0 w-1/3 h-full bg-primary-container/20 -skew-x-12 transform origin-top pointer-events-none">
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-lg bg-surface-container-lowest">
+        <div
+            class="px-container-padding-mobile md:px-container-padding-desktop grid grid-cols-2 md:grid-cols-4 gap-sm md:gap-md">
+            <div
+                class="flex flex-col md:flex-row items-center justify-center gap-xs md:gap-sm text-center fade-up p-md bg-white rounded-lg shadow-sm border border-outline-variant/10 hover:shadow-md transition-shadow">
+                <span class="material-symbols-outlined text-primary text-[28px]">verified</span>
+                <h3 class="font-headline-sm text-[16px] text-on-surface">100% Halal</h3>
+            </div>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-xs md:gap-sm text-center fade-up p-md bg-white rounded-lg shadow-sm border border-outline-variant/10 hover:shadow-md transition-shadow"
+                style="transition-delay: 100ms">
+                <span class="material-symbols-outlined text-primary text-[28px]">diamond</span>
+                <h3 class="font-headline-sm text-[16px] text-on-surface">Premium</h3>
+            </div>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-xs md:gap-sm text-center fade-up p-md bg-white rounded-lg shadow-sm border border-outline-variant/10 hover:shadow-md transition-shadow"
+                style="transition-delay: 200ms">
+                <span class="material-symbols-outlined text-primary text-[28px]">eco</span>
+                <h3 class="font-headline-sm text-[16px] text-on-surface">Alami</h3>
+            </div>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-xs md:gap-sm text-center fade-up p-md bg-white rounded-lg shadow-sm border border-outline-variant/10 hover:shadow-md transition-shadow"
+                style="transition-delay: 300ms">
+                <span class="material-symbols-outlined text-primary text-[28px]">favorite</span>
+                <h3 class="font-headline-sm text-[16px] text-on-surface">Autentik</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-xxl overflow-hidden" id="about">
+        <div
+            class="px-container-padding-mobile md:px-container-padding-desktop grid grid-cols-1 lg:grid-cols-2 gap-xl lg:gap-xxl items-center">
+            <div class="relative zoom-img group fade-up">
+                <div class="rounded-xl overflow-hidden aspect-square shadow-lg">
+                    <img class="w-full h-full object-cover transition-transform duration-700" src="img/profile.png"
+                        alt="Adelia Wandiri - Pemilik Sweet Adeline" />
+                </div>
+                <div
+                    class="absolute -top-10 -right-10 w-40 h-40 bg-secondary-container rounded-full -z-10 opacity-20 blur-2xl">
+                </div>
+            </div>
+            <div class="fade-up">
+                <span class="text-primary font-label-md text-label-md uppercase tracking-widest mb-md block">Cerita
+                    Kami</span>
+                <h2 class="font-headline-lg text-[32px] md:text-headline-lg text-on-surface mb-lg">Menghadirkan Manisnya
+                    Kebahagiaan</h2>
+                <p class="text-on-surface-variant text-body-lg font-body-lg mb-lg">Di Sweet Adeline, kami percaya bahwa
+                    setiap momen berharga layak dirayakan dengan sesuatu yang istimewa. Kami hadir untuk menyajikan
+                    berbagai pilihan kue yang tidak hanya menawan dipandang, tetapi juga memanjakan lidah.</p>
+                <p class="text-on-surface-variant text-body-lg font-body-lg mb-xl">Dengan menggunakan bahan-bahan
+                    pilihan, setiap kue dipanggang dan dihias dengan penuh ketelitian. Mulai dari perayaan ulang tahun
+                    hingga momen kumpul bersama orang terkasih, kami siap melengkapi hari spesial Anda.</p>
+                <a href="#products" class="inline-flex items-center gap-sm text-primary font-bold group">
+                    Pelajari Lebih Lanjut
+                    <span
+                        class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="py-xxl bg-surface-container-low overflow-hidden" id="products">
+        <div class="px-container-padding-mobile md:px-container-padding-desktop">
+            <div class="text-center mb-xxl fade-up">
+                <h2 class="font-headline-lg text-[32px] md:text-headline-lg text-on-surface mb-md">Kreasi Buatan Kami
+                </h2>
+                <p class="text-on-surface-variant font-body-lg max-w-2xl mx-auto">Temukan pilihan kue yang anda
+                    sukai, masing-masing dirancang dengan cermat untuk kesempurnaan.</p>
+            </div>
+            <div class="relative w-full">
+                <!-- Prev Arrow -->
+                <button id="prevBtn"
+                    class="absolute top-1/2 left-1 md:-left-12 -translate-y-1/2 bg-white/90 backdrop-blur-sm text-primary rounded-full p-1.5 md:p-2 shadow-md hover:bg-primary hover:text-white transition-all z-10 hidden hidden-arrows">
+                    <span class="material-symbols-outlined text-[20px] md:text-[24px]">chevron_left</span>
+                </button>
+                <div id="productWrapper" class="overflow-hidden transition-[height] duration-700 ease-in-out"
+                    style="height: auto;">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg" id="productGrid">
+                        <!-- Product 1 -->
+                        <div
+                            class="product-card bg-white rounded-xl overflow-hidden shadow-sm hover-lift group fade-up">
+                            <div class="aspect-[4/3] overflow-hidden relative">
+                                <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    src="img/produk kue/Black forest cake.jpeg" alt="Black Forest Cake" />
+
+                            </div>
+                            <div class="p-lg">
+                                <div class="flex justify-between items-start mb-md">
+                                    <h3 class="font-headline-md text-[20px] text-on-surface">Black Forest Cake</h3>
+                                    <span class="text-primary font-bold hidden">Rp 105.000</span>
+                                </div>
+
+                                <a href="https://wa.me/6282211284894?text=Halo%20Mbak%20Adelia,%20saya%20ingin%20memesan%20Black%20Forest%20Cake"
+                                    target="_blank"
+                                    class="w-full py-sm border border-primary text-primary rounded-xl font-label-md text-label-md hover:bg-primary hover:text-white transition-colors duration-300 flex items-center justify-center gap-sm">
+                                    <span class="material-symbols-outlined text-[20px]">chat</span> Pesan via WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Product 2 -->
+                        <div class="product-card bg-white rounded-xl overflow-hidden shadow-sm hover-lift group fade-up"
+                            style="transition-delay: 100ms">
+                            <div class="aspect-[4/3] overflow-hidden">
+                                <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    src="img/produk kue/Italian cake.jpeg" alt="Italian Cake" />
+                            </div>
+                            <div class="p-lg">
+                                <div class="flex justify-between items-start mb-md">
+                                    <h3 class="font-headline-md text-[20px] text-on-surface">Italian Cake</h3>
+                                    <span class="text-primary font-bold hidden">Rp 105.000</span>
+                                </div>
+
+                                <a href="https://wa.me/6282211284894?text=Halo%20Mbak%20Adelia,%20saya%20ingin%20memesan%20Italian%20Cake"
+                                    target="_blank"
+                                    class="w-full py-sm border border-primary text-primary rounded-xl font-label-md text-label-md hover:bg-primary hover:text-white transition-colors duration-300 flex items-center justify-center gap-sm">
+                                    <span class="material-symbols-outlined text-[20px]">chat</span> Pesan via WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Product 3 -->
+                        <div class="product-card bg-white rounded-xl overflow-hidden shadow-sm hover-lift group fade-up"
+                            style="transition-delay: 200ms">
+                            <div class="aspect-[4/3] overflow-hidden">
+                                <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    src="img/produk kue/Klepon cake.jpeg" alt="Klepon Cake" />
+                            </div>
+                            <div class="p-lg">
+                                <div class="flex justify-between items-start mb-md">
+                                    <h3 class="font-headline-md text-[20px] text-on-surface">Klepon Cake</h3>
+                                    <span class="text-primary font-bold hidden">Rp 105.000</span>
+                                </div>
+
+                                <a href="https://wa.me/6282211284894?text=Halo%20Mbak%20Adelia,%20saya%20ingin%20memesan%20Klepon%20Cake"
+                                    target="_blank"
+                                    class="w-full py-sm border border-primary text-primary rounded-xl font-label-md text-label-md hover:bg-primary hover:text-white transition-colors duration-300 flex items-center justify-center gap-sm">
+                                    <span class="material-symbols-outlined text-[20px]">chat</span> Pesan via WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Product 4 -->
+                        <div
+                            class="product-card bg-white rounded-xl overflow-hidden shadow-sm hover-lift group fade-up">
+                            <div class="aspect-[4/3] overflow-hidden">
+                                <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    src="img/produk kue/Mocca cake.jpeg" alt="Mocca Cake" />
+                            </div>
+                            <div class="p-lg">
+                                <div class="flex justify-between items-start mb-md">
+                                    <h3 class="font-headline-md text-[20px] text-on-surface">Mocca Cake</h3>
+                                    <span class="text-primary font-bold hidden">Rp 105.000</span>
+                                </div>
+
+                                <a href="https://wa.me/6282211284894?text=Halo%20Mbak%20Adelia,%20saya%20ingin%20memesan%20Mocca%20Cake"
+                                    target="_blank"
+                                    class="w-full py-sm border border-primary text-primary rounded-xl font-label-md text-label-md hover:bg-primary hover:text-white transition-colors duration-300 flex items-center justify-center gap-sm">
+                                    <span class="material-symbols-outlined text-[20px]">chat</span> Pesan via WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Product 5 -->
+                        <div class="product-card bg-white rounded-xl overflow-hidden shadow-sm hover-lift group fade-up"
+                            style="transition-delay: 100ms">
+                            <div class="aspect-[4/3] overflow-hidden relative">
+                                <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    src="img/produk kue/kue kustom sendiri.jpeg" alt="Kue Kustom Sendiri" />
+
+                            </div>
+                            <div class="p-lg">
+                                <div class="flex justify-between items-start mb-md">
+                                    <h3 class="font-headline-md text-[20px] text-on-surface">Kue Kustom Sendiri</h3>
+                                    <span class="text-primary font-bold hidden">Rp 105.000</span>
+                                </div>
+
+                                <a href="https://wa.me/6282211284894?text=Halo%20Mbak%20Adelia,%20saya%20ingin%20memesan%20Kue%20Kustom%20Sendiri"
+                                    target="_blank"
+                                    class="w-full py-sm border border-primary text-primary rounded-xl font-label-md text-label-md hover:bg-primary hover:text-white transition-colors duration-300 flex items-center justify-center gap-sm">
+                                    <span class="material-symbols-outlined text-[20px]">chat</span> Pesan via WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Product 6 -->
+                        <div class="product-card bg-white rounded-xl overflow-hidden shadow-sm hover-lift group fade-up"
+                            style="transition-delay: 200ms">
+                            <div class="aspect-[4/3] overflow-hidden">
+                                <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    src="img/produk kue/kue ulang tahun.jpeg" alt="Kue Ulang Tahun" />
+                            </div>
+                            <div class="p-lg">
+                                <div class="flex justify-between items-start mb-md">
+                                    <h3 class="font-headline-md text-[20px] text-on-surface">Kue Ulang Tahun</h3>
+                                    <span class="text-primary font-bold hidden">Rp 105.000</span>
+                                </div>
+
+                                <a href="https://wa.me/6282211284894?text=Halo%20Mbak%20Adelia,%20saya%20ingin%20memesan%20Kue%20Ulang%20Tahun"
+                                    target="_blank"
+                                    class="w-full py-sm border border-primary text-primary rounded-xl font-label-md text-label-md hover:bg-primary hover:text-white transition-colors duration-300 flex items-center justify-center gap-sm">
+                                    <span class="material-symbols-outlined text-[20px]">chat</span> Pesan via WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Product 7 -->
+                        <div
+                            class="product-card bg-white rounded-xl overflow-hidden shadow-sm hover-lift group fade-up hidden">
+                            <div class="aspect-[4/3] overflow-hidden">
+                                <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    src="img/produk kue/marmer cake.jpeg" alt="Marmer Cake" />
+                            </div>
+                            <div class="p-lg">
+                                <div class="flex justify-between items-start mb-md">
+                                    <h3 class="font-headline-md text-[20px] text-on-surface">Marmer Cake</h3>
+                                    <span class="text-primary font-bold hidden">Rp 105.000</span>
+                                </div>
+
+                                <a href="https://wa.me/6282211284894?text=Halo%20Mbak%20Adelia,%20saya%20ingin%20memesan%20Marmer%20Cake"
+                                    target="_blank"
+                                    class="w-full py-sm border border-primary text-primary rounded-xl font-label-md text-label-md hover:bg-primary hover:text-white transition-colors duration-300 flex items-center justify-center gap-sm">
+                                    <span class="material-symbols-outlined text-[20px]">chat</span> Pesan via WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Product 8 -->
+                        <div class="product-card bg-white rounded-xl overflow-hidden shadow-sm hover-lift group fade-up hidden"
+                            style="transition-delay: 100ms">
+                            <div class="aspect-[4/3] overflow-hidden">
+                                <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    src="img/produk kue/wood cake.jpeg" alt="Wood Cake" />
+                            </div>
+                            <div class="p-lg">
+                                <div class="flex justify-between items-start mb-md">
+                                    <h3 class="font-headline-md text-[20px] text-on-surface">Wood Cake</h3>
+                                    <span class="text-primary font-bold hidden">Rp 105.000</span>
+                                </div>
+
+                                <a href="https://wa.me/6282211284894?text=Halo%20Mbak%20Adelia,%20saya%20ingin%20memesan%20Wood%20Cake"
+                                    target="_blank"
+                                    class="w-full py-sm border border-primary text-primary rounded-xl font-label-md text-label-md hover:bg-primary hover:text-white transition-colors duration-300 flex items-center justify-center gap-sm">
+                                    <span class="material-symbols-outlined text-[20px]">chat</span> Pesan via WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Next Arrow -->
+                <button id="nextBtn"
+                    class="absolute top-1/2 right-1 md:-right-12 -translate-y-1/2 bg-white/90 backdrop-blur-sm text-primary rounded-full p-1.5 md:p-2 shadow-md hover:bg-primary hover:text-white transition-all z-10 hidden hidden-arrows">
+                    <span class="material-symbols-outlined text-[20px] md:text-[24px]">chevron_right</span>
+                </button>
+            </div>
+
+            <!-- Carousel Dots -->
+            <div id="carouselDots" class="flex justify-center items-center gap-2 mt-lg hidden fade-up">
+                <!-- Dots generated by JS -->
+            </div>
+
+            <!-- View Toggle Button (hidden on mobile, carousel-only on small screens) -->
+            <div class="text-center mt-xl fade-up hidden md:block">
+                <button id="toggleViewBtn"
+                    class="inline-flex flex-col items-center text-primary hover:text-on-primary-container transition-colors duration-300 group">
+                    <span class="font-label-md text-label-md font-bold mb-1" id="toggleViewText">Tampilkan Lebih
+                        Banyak</span>
+                    <span
+                        class="material-symbols-outlined text-[32px] group-hover:translate-y-2 transition-transform duration-300"
+                        id="toggleViewIcon">keyboard_arrow_down</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+
+
+    <!-- Gallery Section -->
+    <section class="py-xxl bg-surface-container-lowest" id="gallery">
+        <div class="px-container-padding-mobile md:px-container-padding-desktop">
+            <h2 class="font-headline-lg text-[32px] md:text-headline-lg text-on-surface text-center mb-xxl fade-up">
+                Galeri Kami</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-md">
+                <div class="space-y-md">
+                    <div class="rounded-xl overflow-hidden fade-up">
+                        <img class="w-full h-64 object-cover" src="img/galeri/Black forest cake.jpeg"
+                            alt="Galeri Kue 1" />
+                    </div>
+                    <div class="rounded-xl overflow-hidden fade-up">
+                        <img class="w-full h-48 object-cover" src="img/galeri/kue ultah 3.jpeg" alt="Galeri Kue 2" />
+                    </div>
+                </div>
+                <div class="space-y-md">
+                    <div class="rounded-xl overflow-hidden fade-up">
+                        <img class="w-full h-48 object-cover" src="img/galeri/kue ultah 5.jpeg" alt="Galeri Kue 3" />
+                    </div>
+                    <div class="rounded-xl overflow-hidden fade-up">
+                        <img class="w-full h-80 object-cover" src="img/galeri/kue ultah dollar.jpeg"
+                            alt="Galeri Kue 4" />
+                    </div>
+                </div>
+                <div class="space-y-md">
+                    <div class="rounded-xl overflow-hidden fade-up">
+                        <img class="w-full h-80 object-cover" src="img/galeri/kue ultah0.jpeg" alt="Galeri Kue 5" />
+                    </div>
+                    <div class="rounded-xl overflow-hidden fade-up">
+                        <img class="w-full h-48 object-cover" src="img/galeri/kue ultah1.jpeg" alt="Galeri Kue 6" />
+                    </div>
+                </div>
+                <div class="space-y-md">
+                    <div class="rounded-xl overflow-hidden fade-up">
+                        <img class="w-full h-48 object-cover" src="img/galeri/kue ultah2.jpeg" alt="Galeri Kue 7" />
+                    </div>
+                    <div class="rounded-xl overflow-hidden fade-up">
+                        <img class="w-full h-64 object-cover" src="img/galeri/kue ultah4.jpeg" alt="Galeri Kue 8" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FAQ Section -->
+    <section class="py-xxl" id="faq">
+        <div class="px-container-padding-mobile md:px-container-padding-desktop max-w-3xl mx-auto">
+            <h2 class="font-headline-lg text-[32px] md:text-headline-lg text-on-surface text-center mb-xxl fade-up">
+                Pertanyaan Umum</h2>
+            <div class="space-y-md fade-up">
+                <!-- FAQ Item 1 -->
+                <div class="border-b border-outline-variant/20 pb-md">
+                    <button class="w-full flex justify-between items-center text-left py-md group"
+                        onclick="toggleAccordion(this)">
+                        <span
+                            class="font-headline-md text-[18px] text-on-surface group-hover:text-primary transition-colors">Seberapa
+                            jauh hari sebelumnya saya harus memesan?</span>
+                        <span
+                            class="material-symbols-outlined text-secondary transition-transform duration-300">add</span>
+                    </button>
+                    <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-1">
+                        <p class="py-md text-on-surface-variant">Untuk kue standar, kami merekomendasikan pemesanan H-2
+                            (48 jam). Untuk kue pernikahan atau acara khusus yang kustom, harap pesan setidaknya 2-4
+                            minggu sebelumnya untuk memastikan ketersediaan jadwal kami.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 2 -->
+                <div class="border-b border-outline-variant/20 pb-md">
+                    <button class="w-full flex justify-between items-center text-left py-md group"
+                        onclick="toggleAccordion(this)">
+                        <span
+                            class="font-headline-md text-[18px] text-on-surface group-hover:text-primary transition-colors">Apakah
+                            saya bisa memesan kue dengan desain custom?</span>
+                        <span
+                            class="material-symbols-outlined text-secondary transition-transform duration-300">add</span>
+                    </button>
+                    <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-1">
+                        <p class="py-md text-on-surface-variant">Tentu saja! Kami sangat senang membuat kue dengan
+                            desain kustom yang disesuaikan dengan tema acara spesial Anda. Silakan hubungi admin kami
+                            via WhatsApp untuk mendiskusikan detail desain, ukuran, dan penawaran harganya.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 3 -->
+                <div class="border-b border-outline-variant/20 pb-md">
+                    <button class="w-full flex justify-between items-center text-left py-md group"
+                        onclick="toggleAccordion(this)">
+                        <span
+                            class="font-headline-md text-[18px] text-on-surface group-hover:text-primary transition-colors">Di
+                            mana
+                            saya bisa mendapatkan informasi lebih lanjut?</span>
+                        <span
+                            class="material-symbols-outlined text-secondary transition-transform duration-300">add</span>
+                    </button>
+                    <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-1">
+                        <p class="py-md text-on-surface-variant">Anda bisa mendapatkan informasi lebih lengkap terkait
+                            pemesanan, promo, atau katalog terbaru dengan mengikuti Instagram kami di
+                            <b>@sweetadeline_bakehouse</b> atau dengan mengirimkan pesan langsung ke WhatsApp kami. Kami
+                            akan dengan senang hati menjawab semua pertanyaan Anda!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="py-xl px-container-padding-mobile md:px-container-padding-desktop">
+        <div
+            class="relative rounded-[24px] overflow-hidden shadow-xl fade-up group min-h-[300px] flex flex-col justify-center items-center border-[4px] border-surface-container-lowest">
+            <!-- Background Image -->
+            <img src="img/produk kue/Black forest cake.jpeg" alt="Sweet Adeline Cake"
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-[2000ms] group-hover:scale-105" />
+
+            <!-- Elegant Gradient Overlay -->
+            <div
+                class="absolute inset-0 bg-gradient-to-br from-primary/95 via-primary/80 to-black/60 backdrop-blur-[2px]">
+            </div>
+
+
+            <!-- Content -->
+            <div class="relative z-10 text-center px-lg py-xl max-w-3xl mx-auto flex flex-col items-center">
+                <div
+                    class="w-12 h-12 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center mb-sm border border-white/20 shadow-inner">
+                    <span class="material-symbols-outlined text-white text-[24px]">cake</span>
+                </div>
+
+                <h2
+                    class="font-headline-lg text-[22px] sm:text-[28px] md:text-[36px] text-white mb-sm drop-shadow-xl leading-tight">
+                    Siap Membuat Hari Anda Lebih Manis?
+                </h2>
+
+                <p
+                    class="text-white/90 font-body-md md:font-body-lg mb-lg max-w-xl mx-auto drop-shadow-md leading-relaxed">
+                    Satu pesan singkat adalah awal dari kreasi kue sempurna Anda. Mari diskusikan desain impian Anda
+                    bersama kami.
+                </p>
+
+                <a href="https://wa.me/6282211284894?text=Halo%20Sweet%20Adeline,%20saya%20ingin%20berdiskusi%20tentang%20pesanan%20kue..."
+                    target="_blank"
+                    class="inline-flex bg-white text-primary px-lg py-sm rounded-full font-bold text-label-md hover:bg-secondary-container hover:text-on-secondary-container hover:-translate-y-1 transition-all duration-300 shadow-lg items-center justify-center gap-xs mx-auto group/btn border-2 border-transparent hover:border-white/50">
+                    <span
+                        class="material-symbols-outlined text-[20px] group-hover/btn:-rotate-12 transition-transform duration-300">forum</span>
+                    Konsultasi via WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-xxl bg-surface-container-low" id="contact">
+        <div
+            class="px-container-padding-mobile md:px-container-padding-desktop grid grid-cols-1 lg:grid-cols-2 gap-xl lg:gap-xxl items-center">
+            <div class="fade-up">
+                <h2 class="font-headline-lg text-[32px] md:text-headline-lg text-on-surface mb-lg">Hubungi Kami</h2>
+                <div class="space-y-lg">
+                    <div class="flex items-start gap-md">
+                        <span class="material-symbols-outlined text-primary mt-1">alternate_email</span>
+                        <div>
+                            <h6 class="font-bold text-on-surface">Instagram</h6>
+                            <p class="text-on-surface-variant">
+                                <a href="https://instagram.com/sweetadeline_bakehouse" target="_blank"
+                                    class="hover:text-primary transition-colors">@sweetadeline_bakehouse</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-md">
+                        <span class="material-symbols-outlined text-primary mt-1">call</span>
+                        <div>
+                            <h6 class="font-bold text-on-surface">Telepon & WhatsApp</h6>
+                            <p class="text-on-surface-variant"><a href="https://wa.me/6282211284894"
+                                    class="hover:text-primary transition-colors">+62
+                                    822-1128-4894</a></p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-md">
+                        <span class="material-symbols-outlined text-primary mt-1">location_on</span>
+                        <div>
+                            <h6 class="font-bold text-on-surface">Alamat</h6>
+                            <p class="text-on-surface-variant italic">Alamat akan segera ditambahkan...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="rounded-xl overflow-hidden h-[250px] md:h-[400px] shadow-lg fade-up bg-surface-container-highest flex flex-col items-center justify-center p-md md:p-lg text-center border-2 border-dashed border-outline-variant/50 relative">
+                <!-- Map Placeholder Content -->
+                <span class="material-symbols-outlined text-outline text-[64px] mb-md">map</span>
+                <h4 class="font-headline-sm text-on-surface mb-sm">Peta Lokasi</h4>
+                <p class="text-on-surface-variant max-w-sm">Area ini sudah disiapkan untuk menampilkan Google Maps
+                    setelah alamat toko ditentukan.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp FAB -->
+    <a class="fixed bottom-5 right-5 md:bottom-8 md:right-8 z-50 flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-full bg-[#25D366] shadow-lg hover:scale-110 transition-transform active:scale-95 duration-200"
+        href="https://wa.me/6282211284894?text=Halo%20Mbak%20Adelia%20Wandiri,%20saya%20ingin%20bertanya%20tentang%20kue"
+        target="_blank">
+        <svg class="w-6 h-6 md:w-8 md:h-8 text-white" fill="currentColor" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
+    </a>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-white border-t border-outline-variant/10">
+        <div class="px-container-padding-mobile md:px-container-padding-desktop py-lg md:py-xl">
+
+            <!-- Centered Brand -->
+            <div class="flex flex-col items-center text-center mb-md">
+                <a href="#home" class="inline-block mb-xs group">
+                    <h2
+                        class="font-brand text-[34px] md:text-[40px] text-primary group-hover:text-on-primary-container transition-colors duration-300">
+                        Sweet Adeline</h2>
+                </a>
+                <p class="text-on-surface-variant/60 font-body-md text-[12px] md:text-[13px] max-w-sm leading-relaxed">
+                    Menciptakan momen kebahagiaan melalui setiap sajian kue berkualitas.
+                </p>
+            </div>
+
+            <!-- Nav Links Row -->
+            <div class="flex flex-wrap justify-center items-center gap-xs md:gap-md mb-md">
+                <a href="#home"
+                    class="text-on-surface-variant/70 text-[12px] font-label-md uppercase tracking-widest hover:text-primary transition-colors duration-300 px-xs py-xs">Beranda</a>
+                <span class="text-outline-variant/30 hidden sm:inline">·</span>
+
+                <a href="#products"
+                    class="text-on-surface-variant/70 text-[12px] font-label-md uppercase tracking-widest hover:text-primary transition-colors duration-300 px-xs py-xs">Produk</a>
+                <span class="text-outline-variant/30 hidden sm:inline">·</span>
+                <a href="#gallery"
+                    class="text-on-surface-variant/70 text-[12px] font-label-md uppercase tracking-widest hover:text-primary transition-colors duration-300 px-xs py-xs">Galeri</a>
+                <span class="text-outline-variant/30 hidden sm:inline">·</span>
+                <a href="#faq"
+                    class="text-on-surface-variant/70 text-[12px] font-label-md uppercase tracking-widest hover:text-primary transition-colors duration-300 px-xs py-xs">FAQ</a>
+                <span class="text-outline-variant/30 hidden sm:inline">·</span>
+                <a href="#contact"
+                    class="text-on-surface-variant/70 text-[12px] font-label-md uppercase tracking-widest hover:text-primary transition-colors duration-300 px-xs py-xs">Kontak</a>
+            </div>
+
+            <!-- Social Icons -->
+            <div class="flex justify-center items-center gap-sm mb-md">
+                <a href="https://instagram.com/sweetadeline_bakehouse" target="_blank"
+                    class="w-8 h-8 rounded-full border border-outline-variant/20 flex items-center justify-center text-on-surface-variant/50 hover:text-primary hover:border-primary/40 hover:bg-primary/5 transition-all duration-300"
+                    title="Instagram">
+                    <span class="material-symbols-outlined text-[16px]">photo_camera</span>
+                </a>
+                <a href="https://wa.me/6282211284894" target="_blank"
+                    class="w-8 h-8 rounded-full border border-outline-variant/20 flex items-center justify-center text-on-surface-variant/50 hover:text-primary hover:border-primary/40 hover:bg-primary/5 transition-all duration-300"
+                    title="WhatsApp">
+                    <span class="material-symbols-outlined text-[16px]">chat</span>
+                </a>
+            </div>
+
+            <!-- Divider & Copyright -->
+            <div
+                class="border-t border-outline-variant/10 pt-md flex flex-col sm:flex-row justify-between items-center gap-xs">
+                <p class="text-on-surface-variant/40 text-[11px] tracking-wide">
+                    &copy; 2024 Sweet Adeline. All rights reserved.
+                </p>
+                <p class="text-on-surface-variant/40 text-[11px] flex items-center gap-1 tracking-wide">
+                    Crafted with <span class="material-symbols-outlined text-primary/50 text-[11px]">favorite</span> in
+                    Indonesia
+                </p>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

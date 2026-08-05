@@ -1,0 +1,158 @@
+/* ============================================
+   STYLE.CSS - Sweet Adeline Bakery
+   File ini berisi semua gaya (CSS) kustom yang 
+   melengkapi Tailwind CSS.
+   ============================================ */
+
+
+/* ---- PENGATURAN DASAR HALAMAN ----
+   Mencegah halaman bisa di-scroll ke kanan/kiri (horizontal).
+   Ini penting agar tidak ada elemen yang "bocor" keluar layar.
+*/
+html {
+    overflow-x: hidden;
+}
+
+/* Warna latar belakang dan teks default untuk seluruh halaman */
+body {
+    background-color: #f9f9f9; /* Abu-abu sangat terang (hampir putih) */
+    color: #1a1c1c;            /* Warna teks hitam gelap */
+}
+
+
+/* ---- PENGATURAN IKON GOOGLE ----
+   Mengatur tampilan ikon dari Google Material Symbols.
+   FILL 0 = ikon tidak terisi (outline saja)
+   wght 400 = ketebalan normal
+*/
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+
+/* ---- EFEK BAYANGAN LEMBUT ----
+   Digunakan pada kartu atau elemen yang butuh bayangan halus.
+   Warna bayangan menggunakan cokelat transparan agar terasa hangat.
+*/
+.soft-shadow {
+    box-shadow: 0 4px 20px rgba(107, 79, 58, 0.06);
+}
+
+
+/* ---- EFEK HOVER TERANGKAT ----
+   Ketika kursor diarahkan ke elemen (misal: kartu produk),
+   kartu akan "terangkat" ke atas 8px dan bayangannya bertambah.
+   Ini memberi kesan interaktif dan hidup.
+*/
+.hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-8px);   /* Geser ke atas 8px */
+    box-shadow: 0 12px 32px rgba(107, 79, 58, 0.12); /* Bayangan lebih besar */
+}
+
+
+/* ---- ANIMASI MUNCUL DARI BAWAH (Fade Up) ----
+   Elemen dengan class "fade-up" awalnya tersembunyi
+   (transparan & posisi 30px di bawah).
+   Ketika elemen masuk ke layar (terdeteksi oleh JavaScript),
+   class "visible" ditambahkan dan elemen naik + muncul perlahan.
+*/
+.fade-up {
+    opacity: 0;                    /* Awalnya transparan (tidak terlihat) */
+    transform: translateY(30px);   /* Posisi 30px di bawah posisi aslinya */
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
+                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    /* cubic-bezier = kurva animasi yang terasa natural (cepat lalu pelan) */
+}
+
+.fade-up.visible {
+    opacity: 1;                    /* Muncul sepenuhnya */
+    transform: translateY(0);      /* Kembali ke posisi asli */
+}
+
+
+/* ---- EFEK ZOOM GAMBAR ----
+   Ketika kursor diarahkan ke kontainer gambar (misal: foto profil),
+   gambarnya akan sedikit membesar (zoom 5%).
+*/
+.zoom-img:hover img {
+    transform: scale(1.05);
+}
+
+
+/* ---- GRADIEN KREM ----
+   Latar belakang gradien dari abu-abu terang ke putih.
+   Digunakan di bagian Hero (bagian paling atas halaman).
+*/
+.cream-gradient {
+    background: linear-gradient(180deg, #f9f9f9 0%, #ffffff 100%);
+}
+
+
+/* ---- SEMBUNYIKAN SCROLLBAR ----
+   Menyembunyikan scrollbar pada elemen yang bisa di-scroll
+   (misal: carousel produk). Konten tetap bisa digeser,
+   tapi batang scroll-nya tidak terlihat agar tampil bersih.
+   
+   -webkit = untuk Chrome, Safari, Edge
+   -ms = untuk Internet Explorer
+   scrollbar-width = untuk Firefox
+*/
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+
+/* ---- UKURAN KARTU CAROUSEL ----
+   Mengatur lebar setiap kartu produk di mode geser (carousel).
+   
+   MOBILE (default): Setiap kartu mengambil 100% lebar layar
+   → Hanya 1 kartu terlihat, geser untuk melihat yang lain.
+   
+   TABLET (min-width: 768px): Setiap kartu mengambil setengah lebar
+   → 2 kartu terlihat bersebelahan.
+   
+   DESKTOP (min-width: 1024px): Setiap kartu mengambil sepertiga lebar
+   → 3 kartu terlihat bersebelahan.
+   
+   Rumus: (100% - total jarak antar kartu) / jumlah kartu
+   Gap (jarak antar kartu) = 2rem = 32px
+*/
+.carousel-card {
+    flex: 0 0 100%; /* Mobile: 1 kartu penuh */
+}
+
+@media (min-width: 768px) {
+    .carousel-card {
+        flex: 0 0 calc((100% - 2rem) / 2);
+        /* Tablet: 2 kartu, 1 gap (jarak) di antaranya */
+    }
+}
+
+@media (min-width: 1024px) {
+    .carousel-card {
+        flex: 0 0 calc((100% - 4rem) / 3);
+        /* Desktop: 3 kartu, 2 gap di antaranya */
+    }
+}
+
+
+/* ---- JARAK SCROLL DARI NAVBAR ----
+   Ketika pengguna mengklik link navigasi (misal: "Produk"),
+   halaman akan scroll ke bagian tersebut. Tapi karena navbar
+   melayang di atas (fixed), judul bagian bisa tertutup.
+   
+   scroll-margin-top memberi jarak 100px dari atas,
+   sehingga judul tidak tersembunyi di balik navbar.
+*/
+section[id] {
+    scroll-margin-top: 100px;
+}
